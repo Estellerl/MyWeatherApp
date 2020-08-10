@@ -3,11 +3,173 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Lobster+Two&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>WeatherApp</title>
   </head>
   <body>
-    <h1>
-      Testing
-    </h1>
+    <div class="container">
+      <div class="heading">
+        <h1>
+          <span class="city" id="city"> Dublin </span>
+          <span id="degreesTemparature"> 12°</span>
+        </h1>
+        <h2>
+          <span id="degreesCelcius">C</span>
+          |
+          <span id="degreesFarenhite">F</span>
+
+          <br />
+          <span class="currentDay" id="currentDate"> </span>
+          <br />
+          <span id="description">🌤</span>
+          <hr />
+          <section class="today">
+            <div class="row">
+              <div class="col-sm">
+                <span class="pwh" id="Percipitation">Rain</span>
+                <br />
+                🌧
+              </div>
+              <div class="col-sm">
+                <span class="pwh">Wind</span>
+                <br />
+                <span id="win"> wind </span>km/h
+              </div>
+              <div class="col-sm">
+                <span class="pwh">Humidity</span>
+                <br />
+                <span id="hum"></span>
+              </div>
+            </div>
+          </section>
+        </h2>
+      </div>
+      <div class="weatherfivedays">
+        <h3>Next 5 Days</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <ul>
+            <li class="title">
+              Mon
+            </li>
+            <li>
+              🌤
+            </li>
+            <li><span class="pwh">Percipitation </span> 3%</li>
+            <li>
+              <span class="pwh">Wind <br /> </span> 14 km/h
+            </li>
+            <li><span class="pwh">Humidity</span> 30%</li>
+          </ul>
+        </div>
+
+        <div class="col-sm">
+          <ul>
+            <li class="title">
+              Tues
+            </li>
+            <li>
+              🌦
+            </li>
+            <li><span class="pwh">Percipitation </span> 50%</li>
+            <li>
+              <span class="pwh">Wind <br /></span> 30 km/h
+            </li>
+            <li><span class="pwh">Humidity</span> 40%</li>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul>
+            <li class="title">
+              Wed
+            </li>
+            <li>
+              🌤
+            </li>
+            <li><span class="pwh">Percipitation </span>7%</li>
+            <li>
+              <span class="pwh">Wind <br /></span> 7km/h
+            </li>
+            <li><span class="pwh">Humidity</span> 40%</li>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul>
+            <li class="title">
+              Thurs
+            </li>
+            <li>
+              🌨
+            </li>
+            <li><span class="pwh">Percipitation </span>90%</li>
+            <li>
+              <span class="pwh">Wind <br /></span> 37 km/h
+            </li>
+            <li>
+              <span class="pwh">Humidity <br /></span>20%
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm">
+          <ul>
+            <li class="title">
+              Fri
+            </li>
+            <li>
+              🌤
+            </li>
+            <li><span class="pwh">Percipitation </span> 6%</li>
+            <li>
+              <span class="pwh">Wind <br /></span> 10 km/h
+            </li>
+            <li><span class="pwh">Humidity</span> 40%</li>
+          </ul>
+        </div>
+      </div>
+
+      <br />
+
+      <form class="changeCity" id="difCity">
+        <input
+          type="text"
+          placeholder="Search for a city"
+          autocomplete="off"
+          autofocus="on"
+          id="citySearch"
+        />
+        <input type="submit" value="Search" />
+        <input type="button" value="Current Location" id="currentLoc" />
+      </form>
+
+      <br />
+      <hr />
+      <p>
+        https://github.com/Estellerl/MyWeatherApp
+      </p>
+
+      <footer>
+        This page was coded by
+        <a
+          class="name"
+          href="https://www.linkedin.com/in/estelle-reeves-long-2816ab1a1/"
+          target="blank"
+        >
+          Estelle Reeves Long
+        </a>
+      </footer>
+    </div>
+    <script src="JavaScript.js"></script>
   </body>
 </html>
